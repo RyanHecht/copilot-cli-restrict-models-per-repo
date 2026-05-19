@@ -2,12 +2,10 @@
     "$schema": "./policy.schema.json",
     "rules": [
         {
-            "description": "Example: forbid Opus-class models in this customer's monorepo.",
-            "models": ["claude-opus-*", "gpt-5*"],
+            "description": "Example: Forbid claude models in RyanHecht/copilot-cli-restrict-models-per-repo",
+            "models": ["claude-*"],
             "repos": [
-                "https://github.com/example-org/secret-monorepo",
-                "git@github.com:example-org/secret-monorepo.git",
-                "https://gitlab.com/example-org/secret-*"
+                "https://github.com/ryanhecht/copilot-cli-restrict-models-per-repo"
             ]
         }
     ]
