@@ -1,0 +1,14 @@
+{
+    "$schema": "./policy.schema.json",
+    "rules": [
+        {
+            "description": "Example: forbid Opus-class models in this customer's monorepo.",
+            "models": ["claude-opus-*", "gpt-5*"],
+            "repos": [
+                "https://github.com/example-org/secret-monorepo",
+                "git@github.com:example-org/secret-monorepo.git",
+                "https://gitlab.com/example-org/secret-*"
+            ]
+        }
+    ]
+}

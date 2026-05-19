@@ -1,0 +1,12 @@
+{
+    "version": 1,
+    "hooks": {
+        "userPromptSubmitted": [
+            {
+                "type": "command",
+                "command": "node \"${COPILOT_PLUGIN_ROOT}/hooks/check.mjs\"",
+                "timeoutSec": 5
+            }
+        ]
+    }
+}

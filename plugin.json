@@ -1,0 +1,9 @@
+{
+    "name": "restrict-models-per-repo",
+    "description": "Blocks prompts that would use a restricted model in a restricted git repo.",
+    "version": "0.1.0",
+    "author": {
+        "name": "PoC"
+    },
+    "hooks": "./hooks/hooks.json"
+}

@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Restricted-Models Policy",
+    "type": "object",
+    "required": ["rules"],
+    "additionalProperties": false,
+    "properties": {
+        "$schema": { "type": "string" },
+        "rules": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["models", "repos"],
+                "additionalProperties": false,
+                "properties": {
+                    "description": { "type": "string" },
+                    "models": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "description": "Model id patterns (glob / prefix). Examples: 'claude-opus-4.7', 'claude-opus-*', 'gpt-5*'."
+                    },
+                    "repos": {
+                        "type": "array",
+                        "items": { "type": "string" },
+                        "description": "Git remote URL patterns (glob). Matched against the normalized form of every remote on the repo (ssh-vs-https, trailing .git stripped)."
+                    }
+                }
+            }
+        }
+    }
+}
